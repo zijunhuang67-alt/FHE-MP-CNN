@@ -1,0 +1,12 @@
+row_id,metric,source_value,our_value,unit,source_kind,measurement_boundary,normalization,status,verdict,notes
+P01,ResNet20 CIFAR10 accuracy,90.67,unknown,percent,secondary attachment,full encrypted inference,none,unrun,not assessable,Paper PDF and full predictions unavailable
+P02,FHE/plaintext exact agreement,98.67,unknown,percent,secondary attachment,paired full predictions,none,unrun,not assessable,Definition and denominator unverified
+P03,image0 total inference latency,2188790,unknown,ms,tracked author result,from post-setup per-image timer through FC,none,unrun,not assessable,No cross-platform normalization attempted
+P04,image0 all-thread latency,2189209,unknown,ms,tracked author result,outer parallel-loop timer,none,unrun,not assessable,One-image artifact result
+P05,image0 bootstrapping latency sum,1629732,unknown,ms,computed from tracked author result,18 bootstrap calls,none,unrun,not assessable,Mean 90540.667 ms
+P06,image0 convolution latency sum,310287,unknown,ms,computed from tracked author result,19 convolution calls,none,unrun,not assessable,Mean 16330.895 ms
+P07,image0 ReLU latency sum,215965,unknown,ms,computed from tracked author result,19 approximate ReLU calls,none,unrun,not assessable,Mean 11366.579 ms
+P08,image0 bootstrap share of total,74.4581,unknown,percent,computed from tracked author result,bootstrap sum / total,none,unrun,not assessable,Contextual only
+P09,exact-parameter CKKS max absolute error,unknown,1.95647942e-11,absolute error,current measured,6 decoded values after add_plain,none,passed,reproduced,Primitive correctness only
+P10,CNN clean compile,unknown,10.425,seconds,current measured,configure plus build wall time reported by runner,none,passed,reproduced,Not a paper performance metric
+

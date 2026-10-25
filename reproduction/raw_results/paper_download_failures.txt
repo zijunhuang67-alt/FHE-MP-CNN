@@ -1,0 +1,9 @@
+All requests returned HTTP 403 from the execution egress proxy, including after turn-scoped network permission and an escalated command attempt:
+- https://arxiv.org/pdf/2106.07229
+- https://arxiv.org/pdf/2106.07229.pdf?download=1
+- https://export.arxiv.org/pdf/2106.07229
+- https://browse.arxiv.org/pdf/2106.07229.pdf
+- https://ar5iv.labs.arxiv.org/html/2106.07229
+
+No paper file was created. Paper-derived values in the user attachment remain secondary and unverified.
+

@@ -1,0 +1,49 @@
+category,parameter,value,unit,status,provenance,evidence,notes
+scheme,scheme,RNS-CKKS,,extracted,code,infer_seal.cpp:313,Microsoft SEAL 3.6.6 fork
+security,claimed_security_level,128,bit,verified-by-library,measured,parameter_probe output,SEAL tc128 qualifier; no independent LWE Estimator run
+security,security_estimator_version,unknown,,unknown,missing-paper,,Embedded HomomorphicEncryption.org table is available but external estimator/version is not stated in accessible evidence
+ring,poly_modulus_degree,65536,coefficients,measured,code+probe,infer_seal.cpp:292-316,N=2^16
+modulus,coeff_modulus_chain,"51; 16x46; 14x51; 51",bits-per-prime,measured,code+probe,infer_seal.cpp:298-310,32 primes
+modulus,total_coeff_modulus,1552,bits,measured,probe,parameter_probe output,tc128 maximum reported by SEAL is 1792 bits
+plaintext,plaintext_modulus,not_applicable,,extracted,scheme,,CKKS approximate arithmetic
+precision,initial_scale,2^46,,extracted,code,infer_seal.cpp:298;322,
+secret,secret_distribution,sparse ternary,,extracted,code,seal util/rlwe.cpp sample_poly_sparse_ternary,
+secret,secret_key_hamming_weight,192,nonzero coefficients,measured,code+probe,infer_seal.cpp:319-320,
+error,error_distribution,centered binomial,,extracted,build+code,SEAL_USE_GAUSSIAN_NOISE=OFF,
+error,error_stddev,3.2,,extracted,code,seal util/hestdparms.h:147,
+randomness,default_prng,Blake2xb,,extracted,build,CMakeCache.txt,
+keyswitch,decomposition_base,unknown,,unknown,code-audit,,No explicit scalar base found; SEAL RNS key switching internals require deeper audit
+keyswitch,decomposition_levels,unknown,,unknown,code-audit,,Do not infer from modulus-prime count
+bootstrapping,type,RNS-CKKS sparse-slot real bootstrapping,,extracted,code,cnn_seal.cpp bootstrap_real_3,
+bootstrapping,boundary_K,25,,extracted,code,infer_seal.cpp:288,
+bootstrapping,minimax_degree,59,,extracted,code,infer_seal.cpp:289,
+bootstrapping,scale_factor,2,,extracted,code,infer_seal.cpp:290,
+bootstrapping,inverse_degree,1,,extracted,code,infer_seal.cpp:291,
+bootstrapping,loge,10,,extracted,code,infer_seal.cpp:293,
+bootstrapping,boot_levels,14,levels,extracted,code,infer_seal.cpp:303,
+bootstrapping,remaining_levels_after_bootstrap,16,levels,extracted,code+artifact,infer_seal.cpp:302 and sample result,
+bootstrapping,resnet20_count,18,operations,extracted,artifact-result,result/resnet20_cifar10_image0.txt,Not independently rerun
+packing,encoder_slots,32768,complex slots,measured,probe,parameter_probe output,
+packing,stage_sparse_slots,"16384;8192;4096",slots,extracted,code,infer_seal.cpp:295-297,
+packing,input_replication_factor,8,,extracted,code,infer_seal.cpp:429;443,init_p
+network,supported_cifar10_depths,"20;32;44;56;110",layers,extracted,code,infer_seal.cpp:397-401,
+relu,approximation_boundary_B,40,,extracted,code,infer_seal.cpp:254,Input divided by B
+relu,precision_alpha,13,,extracted,code,infer_seal.cpp:257,
+relu,composition_count,3,,extracted,code,infer_seal.cpp:258,
+relu,component_degrees,"15;15;27",degree,extracted,code,infer_seal.cpp:259,
+relu,evaluation_tree,oddbaby,,extracted,code,infer_seal.cpp:264,
+relu,scaled_value,1.7,,extracted,code,infer_seal.cpp:261,
+correctness,target_precision,unknown,,unknown,missing-paper,,Alpha is not silently converted into an error guarantee
+correctness,failure_probability,unknown,,unknown,missing-paper,,
+size,ciphertext_uncompressed,32505961,bytes,measured,exact-parameter-smoke,exact_parameter_ckks_smoke output,Fresh top-level ciphertext
+size,public_key_uncompressed,33554537,bytes,measured,exact-parameter-smoke,exact_parameter_ckks_smoke output,
+size,secret_key_uncompressed,16777304,bytes,measured,exact-parameter-smoke,exact_parameter_ckks_smoke output,
+size,relin_keys_uncompressed,1040190711,bytes,measured,exact-parameter-smoke,exact_parameter_ckks_smoke output,
+size,one_rotation_galois_keys_uncompressed,1040714991,bytes,measured,exact-parameter-smoke,exact_parameter_ckks_smoke output,
+size,requested_unique_rotation_steps,259,steps,computed,code-parse,infer_seal.cpp:345-379,Includes custom step 0 behavior
+size,all_rotation_keys_linear_estimate,251.034,GiB,computed,one-step-size-times-count,,Not measured RSS or aggregate serialization
+timing,warmup_count,unknown,,unknown,missing-paper,,Artifact code has no explicit warm-up loop
+timing,repetition_count,1,sample,extracted,artifact-result,result image0,Only one provided result
+timing,host_device_transfer_policy,not_applicable,,extracted,platform,,CPU-only implementation
+energy,power_method,unknown,,unknown,missing-paper,,
+

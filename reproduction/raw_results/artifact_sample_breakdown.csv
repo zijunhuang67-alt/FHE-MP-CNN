@@ -1,0 +1,13 @@
+operation,count,sum_ms,mean_ms,provenance
+average_pooling,1,2396,2396.000,tracked author result
+batch_norm,19,9175,482.895,tracked author result
+bootstrapping,18,1629732,90540.667,tracked author result
+convolution,19,310287,16330.895,tracked author result
+downsampling,2,4728,2364.000,tracked author result
+fully_connected,1,10130,10130.000,tracked author result
+relu,19,215965,11366.579,tracked author result
+operation_sum,1,2182413,2182413.000,computed
+unattributed_overhead,1,6377,6377.000,computed
+total_image,1,2188790,2188790.000,tracked author result
+all_threads,1,2189209,2189209.000,tracked author result
+

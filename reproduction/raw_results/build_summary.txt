@@ -1,0 +1,8 @@
+official_commit=a752630b1da3c7ed9e5f7f7a7f9aa817db720fdd
+git_tree=687690c3a077fdd47dd37b5dfb31238d15ced80e
+cnn_configure_and_build_exit_code=0
+cnn_runner_wall_seconds=10.425428131
+cnn_sha256=b9958f88e546a25824910c9be28dfa234dfe27f643a30619c7c2a7f68869a08b
+dynamic_missing_libraries=none
+effective_compile_flags=-I/workspace/.local/fhe-mp-cnn/prefix/include -O3 -DNDEBUG -w -O0 -std=c++17 -pthread -march=native -fopenmp
+

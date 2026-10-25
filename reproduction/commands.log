@@ -1,0 +1,17 @@
+# 2026-10-25 command ledger (paths abbreviated with ROOT=/workspace/AI project/Codex project)
+
+1. `git ls-remote --symref https://github.com/snu-ccl/FHE-MP-CNN.git HEAD` -> 0; branch `main-3.6.6`, SHA `a752630b...`.
+2. `git clone --filter=blob:none --branch main-3.6.6 ... ROOT/sources/FHE-MP-CNN` -> 0.
+3. Five arXiv/ar5iv `curl -L --fail` attempts -> 22 / HTTP 403; see raw failure log.
+4. Configure CNN with CMake 3.31.6, `CNN=ON`, local modified SEAL/NTL -> 0.
+5. `cmake --build ROOT/build/cnn --parallel 5` -> 0.
+6. `ldd ROOT/build/cnn/cnn` -> 0; no missing libraries.
+7. Compile/run `correctness/parameter_probe.cpp` -> 0.
+8. Compile/run `correctness/exact_parameter_ckks_smoke.cpp` -> 0.
+9. Configure/build `COMP=ON` unchanged -> 2; C++11/C++17 mismatch.
+10. Replace `-std=c++11` with `-std=c++17` in generated external `flags.make` only; rebuild -> 0.
+11. Run diagnostic `compare` -> 134; transparent ciphertext.
+12. Parse tracked image0 result with awk -> 0; raw breakdown preserved.
+
+Commands intentionally not run: full CNN inference, parameter reductions, swap creation, disabling transparent-ciphertext checks, cross-platform latency normalization.
+

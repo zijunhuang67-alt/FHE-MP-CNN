@@ -1,0 +1,13 @@
+command: correctness/parameter_probe
+exit_code: 0
+parameters_set=true
+parameter_error=success
+poly_modulus_degree=65536
+coeff_modulus_prime_count=32
+requested_coeff_modulus_bits=1552
+actual_coeff_modulus_bits=1552
+tc128_max_coeff_modulus_bits=1792
+qualifier_sec_level=128
+slot_count=32768
+secret_key_hamming_weight=192
+

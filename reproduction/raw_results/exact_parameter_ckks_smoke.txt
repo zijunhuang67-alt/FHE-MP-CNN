@@ -1,0 +1,14 @@
+command: correctness/exact_parameter_ckks_smoke
+exit_code: 0
+last_run:
+  max_abs_error=1.95647942e-11
+  checked_values=6
+  security_qualifier=128
+  ciphertext_bytes_uncompressed=32505961
+  public_key_bytes_uncompressed=33554537
+  secret_key_bytes_uncompressed=16777304
+  relin_keys_bytes_uncompressed=1040190711
+  one_step_galois_keys_bytes_uncompressed=1040714991
+
+Note: encryption randomness changes the exact error across runs. Earlier passing errors ranged from 1.36e-11 to 1.85e-11; threshold was 1e-6.
+

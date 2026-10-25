@@ -1,0 +1,18 @@
+baseline_build:
+  command: cmake configure with COMP=ON; cmake --build
+  exit_code: 2
+  diagnosis: target hard-codes -std=c++11 while installed forked SEAL headers require C++17 (std::byte and other C++17 APIs).
+
+diagnostic_single_change:
+  change: generated external build flags.make only, -std=c++11 -> -std=c++17
+  repository_modified: false
+  build_exit_code: 0
+  run_exit_code: 134
+  terminal_output:
+    MinimaxReLU
+    scale: 3.51844e+13
+    terminate called after throwing an instance of 'std::logic_error'
+    what(): result ciphertext is transparent
+
+verdict: not reproduced
+
